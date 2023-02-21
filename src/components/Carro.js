@@ -20,10 +20,15 @@ const styles = {
 class Carro extends Component {
   state = {};
   render() {
+    const { carro } = this.props;
+    const cantidad = carro.reduce(
+      (acc, producto) => acc + producto.cantidad,
+      0
+    );
     return (
       <div>
         <span style={styles.bubble}>
-          <BubbleAlert value={10} />
+          {cantidad !== 0 ? <BubbleAlert value={cantidad} /> : null}
         </span>
         <button style={styles.carro}>Carro</button>
       </div>
@@ -32,3 +37,10 @@ class Carro extends Component {
 }
 
 export default Carro;
+
+// const arr = [0, 1, 2, 3, 4].reduce((accumulator, currentValue) => {
+//   console.log(accumulator, currentValue);
+//   return accumulator + currentValue;
+// }, 10);
+
+// console.log(arr);

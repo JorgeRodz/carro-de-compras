@@ -11,15 +11,38 @@ class App extends Component {
       { name: "Arbejas", price: 2500, img: "/productos/arbejas.jpg" },
       { name: "Lechuga", price: 500, img: "/productos/lechuga.jpg" },
     ],
+    carro: [],
   };
+
+  agregarAlCarro = (producto) => {
+    const { carro } = this.state; // Desestructuramos el arreglo de productos del carro
+
+    // si el producto ya existe en el carro
+    if (carro.find((x) => x.name === producto.name)) {
+      // Creamos un nuevo arreglo con los productos del carro, pero si el producto ya existe, le sumamos 1 a la cantidad
+      const newCarro = carro.map((x) =>
+        x.name === producto.name ? { ...x, cantidad: x.cantidad + 1 } : x
+      );
+      // Actualizamos el estado con el nuevo arreglo
+      return this.setState({ carro: newCarro });
+    }
+
+    return this.setState({
+      carro: this.state.carro.concat({
+        ...producto,
+        cantidad: 1,
+      }),
+    });
+  };
+
   render() {
     return (
       <div>
-        <Navbar />
+        <Navbar carro={this.state.carro} />
         <Layout>
           <Title />
           <Productos
-            agregarAlCarro={() => console.log("No hace nada")}
+            agregarAlCarro={this.agregarAlCarro}
             productos={this.state.productos}
           />
         </Layout>

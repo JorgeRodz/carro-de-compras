@@ -21,9 +21,7 @@ class BubbleAlert extends Component {
 
   render() {
     const { value } = this.props;
-    return this.getNumber(value) ? (
-      <span style={styles.bubbleAlert}>{this.getNumber(value)}</span>
-    ) : null;
+    return <span style={styles.bubbleAlert}>{this.getNumber(value)}</span>;
   }
 }
 
