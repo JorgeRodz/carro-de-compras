@@ -3,6 +3,11 @@ import BubbleAlert from "./BubbleAlert";
 import DetallesCarro from "./DetallesCarro";
 
 const styles = {
+  wrapperCarro: {
+    textAlign: "right",
+    display: "flex",
+    position: "relative",
+  },
   carro: {
     backgroundColor: "#359a2c",
     color: "#ffffff",
@@ -13,26 +18,28 @@ const styles = {
   },
   bubble: {
     position: "relative",
-    right: "-80px",
-    top: "-20px",
+    right: "-77px",
+    top: "-8px",
   },
 };
 
 class Carro extends Component {
   state = {};
   render() {
-    const { carro } = this.props;
+    const { carro, esCarroVisible, mostrarCarro } = this.props;
     const cantidad = carro.reduce(
       (acc, producto) => acc + producto.cantidad,
       0
     );
     return (
-      <div>
+      <div style={styles.wrapperCarro}>
         <span style={styles.bubble}>
           {cantidad !== 0 ? <BubbleAlert value={cantidad} /> : null}
         </span>
-        <button style={styles.carro}>Carro</button>
-        <DetallesCarro />
+        <button onClick={mostrarCarro} style={styles.carro}>
+          Carro
+        </button>
+        {esCarroVisible ? <DetallesCarro carro={carro} /> : null}
       </div>
     );
   }
