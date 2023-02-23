@@ -1,3 +1,4 @@
+import "./App.css";
 import { Component } from "react";
 import Productos from "./components/Productos";
 import Layout from "./components/Layout";
