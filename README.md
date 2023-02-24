@@ -1,4 +1,4 @@
-[![Generic badge](https://img.shields.io/badge/React-v18.2.0-blue.svg)](https://reactjs.org/)&nbsp;&nbsp;&nbsp;&nbsp;[![Generic badge](https://img.shields.io/badge/Website-UP-green.svg)](https://atlassianblog.wpengine.com/wp-content/uploads/2017/12/44-incredible-404-error-pages@3x-1560x760.png)
+[![Generic badge](https://img.shields.io/badge/React-v18.2.0-blue.svg)](https://reactjs.org/)&nbsp;&nbsp;&nbsp;&nbsp;[![Generic badge](https://img.shields.io/badge/Website-UP-green.svg)](https://jarf-shopping-cart.netlify.app/)
 
 # 🛍️ Shopping Cart 🛒
 
