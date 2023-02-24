@@ -8,7 +8,7 @@
 
 ## ️🧾 Description 🧾
 
-This is a simple shopping cart application that allows users to add items to their cart.
+Simple shopping cart application that allows users to add items to their cart.
 
 We use the **_class component_** approach to build this application.
 
@@ -22,4 +22,4 @@ We use the **_class component_** approach to build this application.
 
 - Clone the repository
 - `cd` into the project directory and run `npm install`
-- **Voila!** Now you can run `npm start` to start the application
+- **Voila!** Now you can run `npm start` to see the application in action
