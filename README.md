@@ -12,7 +12,7 @@
 
 Simple shopping cart application that allows users to add items to their cart.
 
-We use the **_class component_** approach to build this application.
+I use the **_class component_** approach to build this application.
 
 ### ◽ Features ◽
 
